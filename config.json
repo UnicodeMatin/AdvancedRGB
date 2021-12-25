@@ -1,0 +1,6 @@
+{
+  "guild": "Guild/ServerID",
+  "role": "RoleID",
+  "slowmode": "60000",
+  "token": "Token"
+}
