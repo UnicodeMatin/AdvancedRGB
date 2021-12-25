@@ -3,8 +3,7 @@ const client = new Discord.Client();
 const config = require('./config.json');
 client.on("ready", () => {
   console.log("Bot is ready."); 
-
-
+  if(config.slowmode < 60000) console.log(`This slowmode is dangerous!!!`)
   let colors = [
     "#faf5b3",
     "#ffd8a1",
@@ -43,7 +42,6 @@ client.on("ready", () => {
     "#8ec975",
     "#aed361"
   ] 
-  if(config.slowmode < 60000) console.log(`This slowmode is dangerous!!!`)
   setInterval(() => {
     let cor = colors[Math.floor(Math.random() * colors.length)];
     client.guilds.cache.get(config.guild).roles.cache.get(config.role).setColor(cor)
