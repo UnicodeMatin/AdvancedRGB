@@ -43,7 +43,7 @@ client.on("ready", () => {
     "#8ec975",
     "#aed361"
   ] 
-  if(interval < 60000) console.log(`This slowmode is dangerous!!!`)
+  if(config.slowmode < 60000) console.log(`This slowmode is dangerous!!!`)
   setInterval(() => {
     let cor = colors[Math.floor(Math.random() * colors.length)];
     client.guilds.cache.get(config.guild).roles.cache.get(config.role).setColor(cor)
